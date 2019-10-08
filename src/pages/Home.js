@@ -15,9 +15,9 @@ import styles from '../styles/stylesHome';
 // create hooks =============================='
 
 const Home = () => {
-  useEffect(() => {
-    alert('oi');
-  }, []);
+  // useEffect(() => {
+  //   alert('oi');
+  // }, []);
 
   return (
     <View style={styles.containerCodigo}>

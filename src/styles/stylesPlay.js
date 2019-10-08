@@ -3,7 +3,6 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   containerPlay: {
     flex: 1,
-    backgroundColor: '#000',
   },
   tituloPlay: {
     fontSize: 25,
@@ -17,12 +16,11 @@ const styles = StyleSheet.create({
     color: '#fff',
     borderRightWidth: 3,
     borderBottomWidth: 3,
-    borderColor: '#fff',
+    borderColor: '#ccc',
   },
   textos: {
     marginHorizontal: 15,
     marginTop: 15,
-    color: '#fff',
   },
   subtitulo: {
     fontSize: 16,
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#054381',
     borderRightWidth: 3,
     borderBottomWidth: 3,
-    borderColor: '#fff',
+    borderColor: '#ccc',
     borderTopRightRadius: 8,
     padding: 5,
     paddingRight: 10,
@@ -44,7 +42,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontWeight: 'bold',
     fontSize: 18,
-    color: '#fff',
   },
 });
 

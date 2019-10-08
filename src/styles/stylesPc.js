@@ -3,7 +3,6 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   containerPc: {
     flex: 1,
-    backgroundColor: '#000',
   },
   tituloPc: {
     fontSize: 25,
@@ -11,15 +10,16 @@ const styles = StyleSheet.create({
     marginRight: 30,
     marginTop: 15,
     fontWeight: 'bold',
-    backgroundColor: '#fff',
+    backgroundColor: '#ccc',
     borderTopRightRadius: 8,
     padding: 5,
-    color: '#000',
+    borderRightWidth: 3,
+    borderBottomWidth: 3,
+    borderColor: '#999',
   },
   textos: {
     marginHorizontal: 15,
     marginTop: 15,
-    color: '#fff',
   },
   subtitulo: {
     fontSize: 16,
@@ -27,18 +27,19 @@ const styles = StyleSheet.create({
     marginRight: 30,
     marginTop: 10,
     fontWeight: 'bold',
-    backgroundColor: '#fff',
+    backgroundColor: '#ccc',
     borderTopRightRadius: 8,
+    borderRightWidth: 3,
+    borderBottomWidth: 3,
+    borderColor: '#999',
     padding: 5,
     paddingRight: 10,
-    color: '#000',
   },
   codigos: {
     marginHorizontal: 15,
     marginTop: 15,
     fontWeight: 'bold',
     fontSize: 18,
-    color: '#fff',
   },
 });
 

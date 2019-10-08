@@ -3,7 +3,6 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   containerCodigo: {
     flex: 1,
-    backgroundColor: '#000',
   },
   titulo: {
     fontSize: 40,
@@ -12,13 +11,11 @@ const styles = StyleSheet.create({
     marginTop: 45,
     fontWeight: 'bold',
     marginLeft: 50,
-    color: '#fff',
   },
   textos: {
     marginHorizontal: 15,
     marginTop: 30,
     textAlign: 'right',
-    color: '#fff',
   },
   button: {
     position: 'absolute',
@@ -33,8 +30,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRightWidth: 3,
     borderWidth: 3,
-    borderColor: '#e8e8e8',
-    elevation: 2,
+    borderColor: '#010101',
+    elevation: 5,
   },
 });
 
