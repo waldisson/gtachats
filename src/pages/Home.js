@@ -45,7 +45,7 @@ const Home = () => {
       </ScrollView>
       <TouchableOpacity
         onPress={() => {
-          Linking.openURL('market://details?id=com.vocabulomaconico');
+          Linking.openURL('market://details?id=com.gtachats');
         }}
         style={styles.button}>
         <Image
