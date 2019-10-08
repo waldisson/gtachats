@@ -8,16 +8,30 @@ import {
   TouchableOpacity,
   Image,
   Alert,
+  Linking
 } from 'react-native';
 import {Button, Fab} from 'native-base';
 import styles from '../styles/stylesHome';
 
 // create hooks =============================='
 
-const alertar = () => {
+const avaliar = () => {
   Alert.alert(
     'Avalie-nos',
     'Necessitamos da sua avaliação para que possamos desenvolver esse projeto tornando-o cada vez mais eficiente para os nossos ensinamentos. Este projeto é nosso e tem o único intuíto, evolução e desenvolvimento. Aguardamos sua avaliação!',
+    [
+      {
+        text: 'Cancelar',
+        onPress: () => console.log('Cancel Pressed'),
+        style: 'cancel',
+      },
+      {
+        text: 'Avaliar App',
+        onPress: () =>
+          Linking.openURL('market://details?id=com.vocabulomaconico'),
+      },
+    ],
+    {cancelable: false},
   );
 };
 
@@ -46,7 +60,7 @@ const Home = () => {
           </Text>
         </View>
       </ScrollView>
-      <TouchableOpacity onPress={alertar} style={styles.button}>
+      <TouchableOpacity onPress={avaliar} style={styles.button}>
         <Image
           source={require('../assets/icons/playstoreBlack.png')}
           style={{width:22, height:22}}
