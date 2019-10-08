@@ -1,24 +1,27 @@
 //import liraries ==================================
 
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
   View,
   Text,
   ScrollView,
   TouchableOpacity,
   Image,
-  Linking,
+  Alert,
 } from 'react-native';
 import {Button, Fab} from 'native-base';
 import styles from '../styles/stylesHome';
 
 // create hooks =============================='
 
-const Home = () => {
-  // useEffect(() => {
-  //   alert('oi');
-  // }, []);
+const alertar = () => {
+  Alert.alert(
+    'Avalie-nos',
+    'Necessitamos da sua avaliação para que possamos desenvolver esse projeto tornando-o cada vez mais eficiente para os nossos ensinamentos. Este projeto é nosso e tem o único intuíto, evolução e desenvolvimento. Aguardamos sua avaliação!',
+  );
+};
 
+const Home = () => {
   return (
     <View style={styles.containerCodigo}>
       <ScrollView>
@@ -43,17 +46,10 @@ const Home = () => {
           </Text>
         </View>
       </ScrollView>
-      <TouchableOpacity
-        onPress={() => {
-          Linking.openURL('market://details?id=com.gtachats');
-        }}
-        style={styles.button}>
+      <TouchableOpacity onPress={alertar} style={styles.button}>
         <Image
           source={require('../assets/icons/playstoreBlack.png')}
-          style={{
-            width: 22,
-            height: 22,
-          }}
+          style={{width:22, height:22}}
         />
       </TouchableOpacity>
     </View>
