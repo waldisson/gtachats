@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     textAlign: 'right',
     marginRight: 20,
-    marginTop: 45,
+    marginTop: 10,
     fontWeight: 'bold',
     marginLeft: 50,
   },
@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
     marginTop: 30,
     textAlign: 'right',
   },
+  textosFim: {
+    marginHorizontal: 15,
+    marginTop: 10,
+    textAlign: 'right',
+    marginBottom: 50,
+  },
+
   button: {
     position: 'absolute',
     bottom: 0,
@@ -32,6 +39,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: '#010101',
     elevation: 5,
+    marginBottom: 70,
   },
 });
 

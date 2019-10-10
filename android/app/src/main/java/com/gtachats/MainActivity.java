@@ -1,5 +1,7 @@
 package com.gtachats;
 
+import android.os.Bundle;
+import com.google.android.gms.ads.MobileAds;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {

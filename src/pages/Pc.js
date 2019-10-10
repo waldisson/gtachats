@@ -2,6 +2,7 @@
 
 import React, {useEffect} from 'react';
 import {View, Text, ScrollView} from 'react-native';
+import {AdMobBanner} from 'react-native-admob';
 import styles from '../styles/stylesPc';
 // create a component ==============================
 
@@ -134,6 +135,17 @@ const App = () => {
           <Text style={{marginBottom: 10}}></Text>
         </View>
       </ScrollView>
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          margin: 5,
+        }}>
+        <AdMobBanner
+          adSize="banner"
+          adUnitID="ca-app-pub-1920980020493006/8703148619"
+        />
+      </View>
     </View>
   );
 };

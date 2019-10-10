@@ -8,17 +8,20 @@ import {
   TouchableOpacity,
   Image,
   Alert,
-  Linking
+  Linking,
+  StatusBar,
 } from 'react-native';
 import {Button, Fab} from 'native-base';
 import styles from '../styles/stylesHome';
+import {AdMobBanner} from 'react-native-admob';
 
 // create hooks =============================='
 
 const avaliar = () => {
   Alert.alert(
     'Avalie-nos',
-    'Necessitamos da sua avaliação para que possamos desenvolver esse projeto tornando-o cada vez mais eficiente para os nossos ensinamentos. Este projeto é nosso e tem o único intuíto, evolução e desenvolvimento. Aguardamos sua avaliação!',
+    'Sua avaliação é de extrema importancia para que venhamos aprimorar ainda mais nosso serviços. Em caso de contato: truquesgta@gmail.com',
+
     [
       {
         text: 'Cancelar',
@@ -27,8 +30,7 @@ const avaliar = () => {
       },
       {
         text: 'Avaliar App',
-        onPress: () =>
-          Linking.openURL('market://details?id=com.vocabulomaconico'),
+        onPress: () => Linking.openURL('market://details?id=com.gtachats'),
       },
     ],
     {cancelable: false},
@@ -38,6 +40,13 @@ const avaliar = () => {
 const Home = () => {
   return (
     <View style={styles.containerCodigo}>
+      <View>
+        <StatusBar
+          backgroundColor="white"
+          barStyle="dark-content"
+          hidden={false}
+        />
+      </View>
       <ScrollView>
         <View>
           <Text style={styles.titulo}> Grand Thelf Auto V</Text>
@@ -50,7 +59,7 @@ const Home = () => {
             o tempo, por exemplo, ou até os efeitos da gravidade. Podes também
             usar os códigos para que os veículos que escolhes apareçam do nada.
           </Text>
-          <Text style={styles.textos}>
+          <Text style={styles.textosFim}>
             Tens que lembrar de uma coisa antes de usar os códigos de GTA V, é
             que ao usar não irá desbloquear nenhum troféu ou achievement, isto
             se gravares e continuares com esse save. Também exigirá alguma
@@ -63,9 +72,21 @@ const Home = () => {
       <TouchableOpacity onPress={avaliar} style={styles.button}>
         <Image
           source={require('../assets/icons/playstoreBlack.png')}
-          style={{width:22, height:22}}
+          style={{width: 22, height: 22}}
         />
       </TouchableOpacity>
+
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          margin: 5,
+        }}>
+        <AdMobBanner
+          adSize="banner"
+          adUnitID="ca-app-pub-1920980020493006/8703148619"
+        />
+      </View>
     </View>
   );
 };
